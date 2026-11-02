@@ -1,6 +1,11 @@
 #pragma once
 
-
 #include <iostream>
 
-int f(int x);
+class Board {
+public:
+    Board();
+    void display() const;
+private:
+    bool board[3][3];
+};

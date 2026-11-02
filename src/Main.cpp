@@ -3,7 +3,8 @@
 #include "board.hpp"
 
 int main() {
-    int y = f(5);
-    std::cout << "The value returned from f is: " << y << std::endl;
+    Board board;
+    board.display();
+    
     return 0;
 }
