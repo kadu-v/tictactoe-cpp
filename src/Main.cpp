@@ -1,6 +1,9 @@
 #include <iostream>
 
+#include "board.hpp"
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    int y = f(5);
+    std::cout << "The value returned from f is: " << y << std::endl;
     return 0;
 }
