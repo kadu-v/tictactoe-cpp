@@ -21,6 +21,24 @@ bool Board::setCell(int row, int col, int player) {
     return false;
 }
 
+bool Board::isFull() const {
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; ++j) {
+            if (board[i][j] == -1) {
+                return false; // Found an empty cell
+            }
+        }
+    }
+    return true; // No empty cells found
+}
+
+bool Board::isCellEmpty(int row, int col) const {
+    if (row >= 0 && row < 3 && col >= 0 && col < 3) {
+        return board[row][col] == -1; // Return true if the cell is empty
+    }
+    return false; // Invalid cell coordinates
+}
+
 bool Board::checkWin(int player) const {
     // Check rows and columns
     for (int i = 0; i < 3; ++i) {
