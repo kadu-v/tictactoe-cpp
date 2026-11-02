@@ -6,6 +6,8 @@ class Board {
 public:
     Board();
     void display() const;
+    bool setCell(int row, int col, int player);
+    bool checkWin(int player) const;
 private:
-    bool board[3][3];
+    int board[3][3];
 };
